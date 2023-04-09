@@ -1,0 +1,174 @@
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\EM_API.dll.config
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\EM_API.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\EM_API.pdb
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\csc.exe
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\csc.exe.config
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\csc.rsp
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\csi.exe
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\csi.exe.config
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\csi.rsp
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.AppContext.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Console.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.IO.Compression.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Net.Http.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Net.Sockets.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.ValueTuple.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Xml.XPath.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\vbc.exe
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\vbc.exe.config
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\vbc.rsp
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\VBCSCompiler.exe
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\Antlr3.Runtime.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\EntityFramework.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\Newtonsoft.Json.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Net.Http.Formatting.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.Helpers.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.Http.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.Http.WebHost.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.Mvc.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.Optimization.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.Razor.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.WebPages.Deployment.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.WebPages.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.WebPages.Razor.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\WebGrease.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\EntityFramework.xml
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\Newtonsoft.Json.xml
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Net.Http.Formatting.xml
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.Helpers.xml
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.Http.xml
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.Http.WebHost.xml
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.Mvc.xml
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.Optimization.xml
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.Razor.xml
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.WebPages.xml
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.WebPages.Deployment.xml
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\System.Web.WebPages.Razor.xml
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\Antlr3.Runtime.pdb
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\obj\Debug\EM_API.csproj.AssemblyReference.cache
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\obj\Debug\EM_API.csproj.CoreCompileInputs.cache
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\obj\Debug\EM_API.csproj.CopyComplete
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\obj\Debug\EM_API.dll
+C:\Users\rajar\source\repos\ReactAPI\EM_API\EM_API\obj\Debug\EM_API.pdb
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\EM_API.dll.config
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\EM_API.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\EM_API.pdb
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\csc.exe
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\csc.exe.config
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\csc.rsp
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\csi.exe
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\csi.exe.config
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\csi.rsp
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\Microsoft.Managed.Core.targets
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.AppContext.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Collections.Immutable.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Console.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Globalization.Calendars.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.IO.Compression.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.IO.Compression.ZipFile.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.IO.FileSystem.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Net.Http.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Net.Sockets.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Reflection.Metadata.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Threading.Tasks.Extensions.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.ValueTuple.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Xml.XmlDocument.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Xml.XPath.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\vbc.exe
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\vbc.exe.config
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\vbc.rsp
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\VBCSCompiler.exe
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\roslyn\VBCSCompiler.exe.config
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\Antlr3.Runtime.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\EntityFramework.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\Microsoft.Web.Infrastructure.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\Newtonsoft.Json.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Net.Http.Formatting.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.Helpers.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.Http.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.Http.WebHost.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.Mvc.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.Optimization.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.Razor.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.WebPages.Deployment.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.WebPages.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.WebPages.Razor.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\WebGrease.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\EntityFramework.xml
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\Newtonsoft.Json.xml
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Net.Http.Formatting.xml
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.Helpers.xml
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.Http.xml
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.Http.WebHost.xml
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.Mvc.xml
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.Optimization.xml
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.Razor.xml
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.WebPages.xml
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.WebPages.Deployment.xml
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\System.Web.WebPages.Razor.xml
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\Antlr3.Runtime.pdb
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\obj\Debug\EM_API.csproj.AssemblyReference.cache
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\obj\Debug\EM_API.csproj.CoreCompileInputs.cache
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\obj\Debug\EM_API.csproj.CopyComplete
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\obj\Debug\EM_API.dll
+F:\UNIVERSITY\Projects\1. EXERCISE MONITORING RN\Api\EM_API\EM_API\obj\Debug\EM_API.pdb

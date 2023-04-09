@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ExerciseMonitoringModelStoreContainer" CdmEntityContainer="EM_Entities">
+    <EntitySetMapping Name="ProgressPhotos">
+      <EntityTypeMapping TypeName="ExerciseMonitoringModel.ProgressPhoto">
+        <MappingFragment StoreEntitySet="ProgressPhotos">
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="pid" ColumnName="pid" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="caption" ColumnName="caption" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ExerciseMonitoringModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="profilePic" ColumnName="profilePic" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="bmi" ColumnName="bmi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
