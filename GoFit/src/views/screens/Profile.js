@@ -1,9 +1,57 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Divider } from 'react-native-paper';
 import COLORS from '../../consts/colors';
+import UnitDisplay from '../components/UnitDisplay';
+import IP from '../../consts/IP';
 
-const Profile = () => {
+const Profile = ({ navigation, route }) => {
+
+    const userData = route.params.userData
+    const [selectedWeightUnit, setSelectedWeightUnit] = useState('kg');
+    const [selectedHeightUnit, setSelectedHeightUnit] = useState('ft');
+    const [height, setHeight] = useState(userData.height);
+    const [weight, setWeight] = useState(`${userData.weight} kg`)
+
+    const convertHeight = (value, unit) => {
+        if (unit === 'cm') {
+            const [feet, inches] = userData.height.split('-');
+            const totalInches = (feet * 12) + Number(inches);
+            const cm = totalInches * 2.54;
+            return `${cm.toFixed(0)} cm`;
+        } else {
+            const totalInches = value.split(' ')[0] / 2.54;
+            const calculatedFeet = Math.floor(totalInches / 12);
+            const calculatedInches = totalInches % 12;
+            return `${calculatedFeet}' ${calculatedInches.toFixed(0)}"`;
+        }
+    };
+    
+    const handleWeightUnitChange = (unit) => {
+        unit === 'lbs' ?
+            setWeight(`${(userData.weight * 2.20462).toFixed(0)} lbs`)
+            :
+            setWeight(`${userData.weight} kg`);
+
+        setSelectedWeightUnit(unit)
+    }
+
+    const handleUnitChange = (unit) => {
+        if (unit === 'cm') {
+            setHeight(convertHeight(height, 'cm'));
+        } else {
+            const feet = userData.height.split('-')[0]
+            const inches = userData.height.split('-')[1]
+            setHeight(`${feet}\' ${inches}\''`);
+        }
+        setSelectedHeightUnit(unit);
+    };
+
+    useEffect(() => {
+        const feet = userData.height.split('-')[0]
+        const inches = userData.height.split('-')[1]
+        setHeight(`${feet}\' ${inches}\''`);
+    }, [userData])
 
     const images = [
         { id: 1, img: '../../assets/RaheelPic.jpg' },
@@ -17,23 +65,26 @@ const Profile = () => {
         { id: 9, img: '../../assets/RaheelPic.jpg' },
         { id: 10, img: '../../assets/RaheelPic.jpg' },
     ]
+
     return (
+
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.headerText}>Profile</Text>
             </View>
             <View style={styles.userInfo}>
                 <View style={styles.imgContainer}>
+
                     <Image
                         style={styles.profileImg}
-                        source={require('../../assets/user.png')}
+                        source={userData.profilePic ? { uri: `http://${IP}/EM_API/UserImages/${userData.profilePic}` } : require('../../assets/user.png')}
                         resizeMode={'center'}
                     />
                 </View>
                 <View style={styles.userDetails}>
-                    <Text style={styles.Name}>Raheel Afzal</Text>
-                    <Text style={{ color: COLORS.dark }}>Male, 23 years old</Text>
-                    <Text style={styles.bmi}>Bmi 22</Text>
+                    <Text style={styles.Name}>{userData.name}</Text>
+                    <Text style={{ color: COLORS.dark }}>{userData.gender}, {userData.age} years old</Text>
+                    <Text style={styles.bmi}>Bmi {userData.bmi}</Text>
 
                 </View>
             </View>
@@ -43,7 +94,7 @@ const Profile = () => {
             <View style={styles.gallery}>
                 <View style={styles.cameraIconBox}>
                     <Image
-                        style={{width:40,height:40}}
+                        style={{ width: 40, height: 40 }}
                         source={require('../../assets/photo-camera.png')}
                         resizeMode={'center'}
                     />
@@ -63,35 +114,22 @@ const Profile = () => {
             <Divider style={{ width: "60%", alignSelf: "center", height: 1 }} />
             <View style={styles.unit}>
                 <Text style={styles.unitText}>Units</Text>
-                <View style={styles.unitWrapper}>
-                    <View style={styles.unitsIcon}>
-                        <Image
-                            style={{ height: 30, width: 30 }}
-                            source={require('../../assets/weight-scale.png')}
-                            resizeMode={'center'}
-                        />
-                    </View>
-                    <Text style={styles.unitNumber}> 64 </Text>
-                    <View style={styles.unitPicker}>
-                        <Text style={styles.firstUnit}> kg </Text>
-                        <Text style={styles.secondUnit}> lbs </Text>
-                    </View>
-                </View>
-                <View style={styles.unitWrapper}>
-                    <View style={styles.unitsIcon}>
-                        <Image
-                            style={{ height: 30, width: 30 }}
-                            source={require('../../assets/height.png')}
-                            resizeMode={'center'}
-                        />
-                    </View>
-                    <Text style={styles.unitNumber}> 73 </Text>
-                    <View style={styles.unitPicker}>
-                        <Text style={styles.firstUnit}> cm </Text>
-                        <Text style={styles.secondUnit}> ft & cm </Text>
-                    </View>
-                </View>
+                <UnitDisplay
+                    icon={require('../../assets/weight-scale.png')}
+                    value={weight}
+                    options={['kg', 'lbs']}
+                    selectedUnit={selectedWeightUnit}
+                    onUnitPress={handleWeightUnitChange}
+                />
+                <UnitDisplay
+                    icon={require('../../assets/height.png')}
+                    value={height}
+                    options={['cm', 'ft']}
+                    selectedUnit={selectedHeightUnit}
+                    onUnitPress={handleUnitChange}
+                />
             </View>
+
             <Divider style={{ width: "60%", alignSelf: "center", height: 1 }} />
 
             <View style={styles.footer}>
@@ -101,9 +139,11 @@ const Profile = () => {
                         source={require('../../assets/userP.png')}
                         resizeMode={'center'}
                     />
-                    <Text style={styles.editProfileText}>
-                        Edit Profile
-                    </Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('EditProfileScreen', { userData })}>
+                        <Text style={styles.editProfileText}>
+                            Edit Profile
+                        </Text>
+                    </TouchableOpacity>
                 </View>
                 <View style={styles.iconsWrapper}>
                     <Image
@@ -165,6 +205,9 @@ const styles = StyleSheet.create({
     profileImg: {
         height: 110,
         width: 110,
+        borderRadius: 100,
+        borderWidth: 0.5,
+        borderColor: COLORS.primary
     },
     userDetails: {
         flex: 1.2,
@@ -200,8 +243,8 @@ const styles = StyleSheet.create({
         marginHorizontal: 4,
         borderRadius: 5,
         backgroundColor: "#ebebeb",
-        justifyContent:"center",
-        alignItems:"center"
+        justifyContent: "center",
+        alignItems: "center"
     },
     galleryImg: {
         height: 55,
@@ -220,44 +263,26 @@ const styles = StyleSheet.create({
         color: COLORS.dark,
         fontWeight: "500",
     },
-    unitWrapper: {
-        flex: 1,
-        flexDirection: "row",
-        alignItems: "center",
-    },
-    unitsIcon: {
-        flex: 1.5,
-    },
+
     unitPicker: {
         flex: 2,
         flexDirection: "row",
         justifyContent: "flex-end",
         gap: 10,
     },
-    unitNumber: {
-        fontSize: 15,
-        textAlign: "center",
-        borderBottomWidth: 1.3,
-        borderBottomColor: COLORS.grey
-    },
-    firstUnit: {
+    selectedUnit: {
         backgroundColor: '#3a9eff',
         color: COLORS.white,
         height: 24,
-        width: 50,
+        width: 55,
         fontSize: 13,
         borderRadius: 20,
         textAlign: "center",
         textAlignVertical: "center"
     },
-    secondUnit: {
+    unSelectedUnit: {
         backgroundColor: '#aae3f9',
-        height: 24,
-        width: 60,
-        fontSize: 13,
-        borderRadius: 20,
-        textAlign: "center",
-        textAlignVertical: "center"
+        color: COLORS.dark
     },
     footer: {
         flex: 3.5,

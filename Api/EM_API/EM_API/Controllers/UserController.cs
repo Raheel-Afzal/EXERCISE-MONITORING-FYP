@@ -19,7 +19,7 @@ namespace EM_API.Controllers
         {
             try
             {
-                var result = db.Users.Where(s=>s.email==email && s.password==password).Select(s => new { s.uid, s.email, s.password, s.profilePic, s.gender, s.age, s.height, s.weight, s.bmi }).FirstOrDefault();
+                var result = db.Users.Where(s=>s.email==email && s.password==password).Select(s => new { s.uid, s.name,s.email, s.password, s.profilePic, s.gender, s.age, s.height, s.weight, s.bmi }).FirstOrDefault();
                 return Request.CreateResponse(HttpStatusCode.OK, result);
             }
             catch (Exception ex)

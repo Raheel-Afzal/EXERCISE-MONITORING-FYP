@@ -60,7 +60,7 @@ const ExerciseDetail = ({ route }) => {
                     />
                 </View>
 
-                <TouchableOpacity style={styles.AiButton}>
+                <TouchableOpacity activeOpacity={0.9} style={styles.AiButton}>
                     <Image
                         style={styles.AiArm}
                         source={require('../../assets/AiArmLeft.png')}
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
     AiArm: {
         height: 42,
         width: 42,
-
+        opacity:0.8
     },
 
     AiText: {

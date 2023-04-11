@@ -9,7 +9,8 @@ import ExerciseNavigation from './ExerciseNavigation';
 
 const Tab = createBottomTabNavigator();
 
-const BottomNavigator = () => {
+const BottomNavigator = ({route})  => {
+  
   return (
     <Tab.Navigator
       screenOptions={{
@@ -44,6 +45,7 @@ const BottomNavigator = () => {
       <Tab.Screen
         name="Profile"
         component={Profile}
+        initialParams={route.params}
         options={{
           tabBarLabelStyle: {
             color: COLORS.white,

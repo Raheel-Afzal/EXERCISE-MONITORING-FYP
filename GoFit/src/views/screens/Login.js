@@ -35,7 +35,7 @@ const SignUp = () => {
       const data = await response.json();
       if (data.uid) {
         navigation.navigate('Home', {
-          userID: data.uid,
+          userData: data,
         });
       }
       setLoading(false)

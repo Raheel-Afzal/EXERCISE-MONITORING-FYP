@@ -76,8 +76,6 @@ const style = StyleSheet.create({
     justifyContent: 'center',
   },
   btnGradient: {
-    width: 20,
-    height: 20,
     borderRadius: 20,
     height: 90,
     width: 320,
@@ -88,7 +86,7 @@ const style = StyleSheet.create({
     },
     shadowOpacity: 0.17,
     shadowRadius: 2.54,
-    elevation: 3
+    elevation: 6
   },
   btnWraper: {
     flex: 1,
