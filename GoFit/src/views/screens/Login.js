@@ -30,9 +30,23 @@ const SignUp = () => {
     try {
       setLoading(true)
       const response = await fetch(
+        // `http://192.168.0.104/EM_API/api/user/getuser?email=raheel@gmail.com&password=2233`
         `http://${IP}/EM_API/api/user/getuser?email=${email}&password=${password}`,
       );
       const data = await response.json();
+    //   const data = {
+    //     "uid": 5,
+    //     "name": "raheel afzal",
+    //     "email": "raheel@gmail.com",
+    //     "password": "2233",
+    //     "profilePic": "",
+    //     "gender": "male",
+    //     "age": "21",
+    //     "height": "5-8",
+    //     "weight": "71",
+    //     "bmi": "25"
+    // }
+     
       if (data.uid) {
         navigation.navigate('Home', {
           userData: data,
@@ -40,6 +54,7 @@ const SignUp = () => {
       }
       setLoading(false)
     } catch (error) {
+      console.log(error)
       ToastAndroid.showWithGravity(
         'Login Failed: Password or Email not matched Or check your network connection ',
         ToastAndroid.SHORT,

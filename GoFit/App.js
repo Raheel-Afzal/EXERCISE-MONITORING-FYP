@@ -16,6 +16,7 @@ import AgeSelection from './src/views/screens/AgeSelection';
 import ExerciseDetail from './src/views/screens/ExerciseDetail';
 import SplashScreen from './src/views/screens/SplashScreen';
 import EditProfile from './src/views/screens/EditProfile';
+import Gallery from './src/views/screens/Gallery';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,7 @@ const App = () => {
         <Stack.Screen name="Home" component={BottomNavigator} />
         <Stack.Screen name="ProfileScreen" component={Profile} />
         <Stack.Screen name="EditProfileScreen" component={EditProfile} />
+        <Stack.Screen name="GalleryScreen" component={Gallery} />
         <Stack.Screen name="GenderSelection" component={GenderSelection} />
         <Stack.Screen name="AgeSelection" component={AgeSelection} />
       </Stack.Navigator>

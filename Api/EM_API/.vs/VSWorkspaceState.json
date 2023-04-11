@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\EM_API",
-    "\\EM_API\\Controllers"
+    "\\EM_API\\Controllers",
+    "\\EM_API\\UserImages"
   ],
-  "SelectedNode": "\\EM_API\\Controllers\\UserController.cs",
+  "SelectedNode": "\\EM_API\\EM_API.csproj",
   "PreviewInSolutionExplorer": false
 }

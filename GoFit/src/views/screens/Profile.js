@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Divider } from 'react-native-paper';
 import COLORS from '../../consts/colors';
 import UnitDisplay from '../components/UnitDisplay';
 import IP from '../../consts/IP';
+import { useFocusEffect } from '@react-navigation/native';
 
 const Profile = ({ navigation, route }) => {
 
@@ -13,6 +14,22 @@ const Profile = ({ navigation, route }) => {
     const [height, setHeight] = useState(userData.height);
     const [weight, setWeight] = useState(`${userData.weight} kg`)
 
+    const [progressPics, setProgressPics] = useState([]);
+    const getProgressPhotos = async () => {
+        try {
+            const response = await fetch(`http://192.168.0.104/EM_API/api/ProgressPhotos/getProgressPhotos?USERID=${userData.uid}`);
+            const json = await response.json();
+            setProgressPics(json)
+        } catch (error) {
+            console.error(error);
+
+        }
+    }
+    useFocusEffect(
+        useCallback(() => {
+            getProgressPhotos()
+        }, [])
+    );
     const convertHeight = (value, unit) => {
         if (unit === 'cm') {
             const [feet, inches] = userData.height.split('-');
@@ -26,7 +43,7 @@ const Profile = ({ navigation, route }) => {
             return `${calculatedFeet}' ${calculatedInches.toFixed(0)}"`;
         }
     };
-    
+
     const handleWeightUnitChange = (unit) => {
         unit === 'lbs' ?
             setWeight(`${(userData.weight * 2.20462).toFixed(0)} lbs`)
@@ -88,7 +105,7 @@ const Profile = ({ navigation, route }) => {
 
                 </View>
             </View>
-            <TouchableOpacity style={styles.viewAll}>
+            <TouchableOpacity style={styles.viewAll} onPress={() => { navigation.navigate('GalleryScreen', { userData }) }}>
                 <Text>{"View All >"}</Text>
             </TouchableOpacity>
             <View style={styles.gallery}>
@@ -100,11 +117,11 @@ const Profile = ({ navigation, route }) => {
                     />
                 </View>
                 {
-                    images.slice(0, 4).map((img) => (
-                        <TouchableOpacity key={img.id}>
+                    progressPics.slice(0, 4).map((data,index) => (
+                        <TouchableOpacity key={index}>
                             <Image
                                 style={styles.galleryImg}
-                                source={require('../../assets/RaheelPic.jpg')}
+                                source={{ uri: `http://192.168.0.104/EM_API/Images/${data.photo}` }}
                                 resizeMode={'center'}
                             />
                         </TouchableOpacity>
