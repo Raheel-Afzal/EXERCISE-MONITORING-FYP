@@ -30,7 +30,6 @@ const SignUp = () => {
     try {
       setLoading(true)
       const response = await fetch(
-        // `http://192.168.0.104/EM_API/api/user/getuser?email=raheel@gmail.com&password=2233`
         `http://${IP}/EM_API/api/user/getuser?email=${email}&password=${password}`,
       );
       const data = await response.json();

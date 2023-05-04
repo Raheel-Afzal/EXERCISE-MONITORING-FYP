@@ -17,7 +17,7 @@ const Profile = ({ navigation, route }) => {
     const [progressPics, setProgressPics] = useState([]);
     const getProgressPhotos = async () => {
         try {
-            const response = await fetch(`http://192.168.0.104/EM_API/api/ProgressPhotos/getProgressPhotos?USERID=${userData.uid}`);
+            const response = await fetch(`http://${IP}/EM_API/api/ProgressPhotos/getProgressPhotos?USERID=${userData.uid}`);
             const json = await response.json();
             setProgressPics(json)
         } catch (error) {
@@ -70,18 +70,7 @@ const Profile = ({ navigation, route }) => {
         setHeight(`${feet}\' ${inches}\''`);
     }, [userData])
 
-    const images = [
-        { id: 1, img: '../../assets/RaheelPic.jpg' },
-        { id: 2, img: '../../assets/RaheelPic.jpg' },
-        { id: 3, img: '../../assets/RaheelPic.jpg' },
-        { id: 4, img: '../../assets/RaheelPic.jpg' },
-        { id: 5, img: '../../assets/RaheelPic.jpg' },
-        { id: 6, img: '../../assets/RaheelPic.jpg' },
-        { id: 7, img: '../../assets/RaheelPic.jpg' },
-        { id: 8, img: '../../assets/RaheelPic.jpg' },
-        { id: 9, img: '../../assets/RaheelPic.jpg' },
-        { id: 10, img: '../../assets/RaheelPic.jpg' },
-    ]
+  
 
     return (
 
@@ -121,7 +110,7 @@ const Profile = ({ navigation, route }) => {
                         <TouchableOpacity key={index}>
                             <Image
                                 style={styles.galleryImg}
-                                source={{ uri: `http://192.168.0.104/EM_API/Images/${data.photo}` }}
+                                source={{ uri: `http://${IP}/EM_API/Images/${data.photo}` }}
                                 resizeMode={'center'}
                             />
                         </TouchableOpacity>

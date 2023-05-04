@@ -7,6 +7,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import EntypoIcon from 'react-native-vector-icons/Entypo'
 import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
 import { useFocusEffect } from '@react-navigation/native';
+import IP from '../../consts/IP';
 const Gallery = ({ route }) => {
     const userData = route.params.userData
     const [isLike, setIsLike] = useState(false);
@@ -21,7 +22,7 @@ const Gallery = ({ route }) => {
     const [progressPics, setProgressPics] = useState([]);
     const getProgressPhotos = async () => {
         try {
-            const response = await fetch(`http://192.168.0.104/EM_API/api/ProgressPhotos/getProgressPhotos?USERID=${userData.uid}`);
+            const response = await fetch(`http://${IP}/EM_API/api/ProgressPhotos/getProgressPhotos?USERID=${userData.uid}`);
             const json = await response.json();
             setProgressPics(json)
         } catch (error) {
@@ -83,7 +84,7 @@ const Gallery = ({ route }) => {
                                 <Card.Title style={{ width: 200 }} titleStyle={{ fontSize: 14 }} title={formatDate(item.date)} subtitle={formatDateDifference(item.date)} subtitleStyle={{ fontSize: 12, bottom: 10 }} left={LeftContent} />
                                 <DeleteIcon />
                             </View>
-                            <Card.Cover source={{ uri: `http://192.168.0.104/EM_API/Images/${item.photo}` }} style={{ borderRadius: 0 }} />
+                            <Card.Cover source={{ uri: `http://${IP}/EM_API/Images/${item.photo}` }} style={{ borderRadius: 0 }} />
                             <Card.Content style={{ flexDirection: "row", marginTop: 10 }}>
                                 <Text variant="labelLarge">Caption: </Text>
                                 <Text style={{ width: 200, textAlign: "justify", lineHeight: 20 }}>  {item.caption ? item.caption : "no caption"}</Text>
