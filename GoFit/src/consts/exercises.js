@@ -35,7 +35,7 @@ const exercises = [
     primaryMuscles:"Chest",
     secondaryMuscles:"Shoulders, abs, arms",
     instruction:'Get down on all fours, placing your hands slightly wider than your shoulders.#Straighten your arms and legs.#Lower your body until your chest nearly touches the floor.#Pause, then push yourself back up.',
-    icon: require('../assets/bench-dips.png'),
+    icon: require('../assets/kickbacks.png'),
     gif : require('../assets/exercise.png')
 
   },
@@ -45,7 +45,7 @@ const exercises = [
     primaryMuscles:"Chest",
     secondaryMuscles:"Shoulders, abs, arms",
     instruction:'Get down on all fours, placing your hands slightly wider than your shoulders.#Straighten your arms and legs.#Lower your body until your chest nearly touches the floor.#Pause, then push yourself back up.',
-    icon: require('../assets/bench-dips.png'),
+    icon: require('../assets/pushdown.png'),
     gif : require('../assets/exercise.png')
 
   },
