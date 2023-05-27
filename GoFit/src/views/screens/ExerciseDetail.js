@@ -55,12 +55,10 @@ const ExerciseDetail = ({ route }) => {
                         keyExtractor={(item, index) => index.toString()}
                         renderItem={({ item, index }) => (
                             <Text style={styles.exerciseSteps} key={index}>{`${index + 1}.) ${item} `}</Text>
-
                         )}
                     />
                 </View>
-
-                <TouchableOpacity activeOpacity={0.9} style={styles.AiButton}>
+                <TouchableOpacity activeOpacity={0.9} style={styles.AiButton} >
                     <Image
                         style={styles.AiArm}
                         source={require('../../assets/AiArmLeft.png')}
