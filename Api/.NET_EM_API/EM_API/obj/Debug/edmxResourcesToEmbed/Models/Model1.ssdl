@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExerciseMonitoringModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="exerciseLogs">
+    <Key>
+      <PropertyRef Name="logId" />
+    </Key>
+    <Property Name="logId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="uid" Type="int" Nullable="false" />
+    <Property Name="exerciseName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="reps" Type="int" Nullable="false" />
+    <Property Name="time" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProgressPhotos">
+    <Key>
+      <PropertyRef Name="pid" />
+    </Key>
+    <Property Name="pid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photo" Type="varchar" MaxLength="200" />
+    <Property Name="date" Type="date" />
+    <Property Name="caption" Type="text" />
+    <Property Name="uid" Type="int" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="uid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+    <Property Name="profilePic" Type="varchar" MaxLength="200" />
+    <Property Name="gender" Type="varchar" MaxLength="10" />
+    <Property Name="age" Type="varchar" MaxLength="2" />
+    <Property Name="height" Type="varchar" MaxLength="50" />
+    <Property Name="weight" Type="varchar" MaxLength="50" />
+    <Property Name="bmi" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="wrongPoseLogs">
+    <Key>
+      <PropertyRef Name="wrngPoseId" />
+    </Key>
+    <Property Name="wrngPoseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="uid" Type="int" Nullable="false" />
+    <Property Name="atRep" Type="int" />
+    <Property Name="wrongPosePic" Type="varchar(max)" />
+    <Property Name="time" Type="datetime" />
+    <Property Name="direction" Type="varchar" MaxLength="50" />
+    <Property Name="exerciseName" Type="varchar" MaxLength="50" />
+    <Property Name="angleOne" Type="varchar" MaxLength="50" />
+    <Property Name="angleTwo" Type="varchar" MaxLength="50" />
+    <Property Name="wrongAngleOne" Type="varchar" MaxLength="50" />
+    <Property Name="wrongAngleTwo" Type="varchar" MaxLength="50" />
+    <Property Name="correctAngleOne" Type="varchar" MaxLength="50" />
+    <Property Name="correctAngleTwo" Type="varchar" MaxLength="50" />
+    <Property Name="bodyAngle" Type="varchar" MaxLength="50" />
+    <Property Name="vertix1" Type="varchar" MaxLength="50" />
+    <Property Name="vertix2" Type="varchar" MaxLength="50" />
+    <Property Name="vertix3" Type="varchar" MaxLength="50" />
+    <Property Name="vertix4" Type="varchar" MaxLength="50" />
+    <Property Name="vertix5" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_ProgressPhotos_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="ProgressPhotos" Type="Self.ProgressPhotos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="uid" />
+      </Principal>
+      <Dependent Role="ProgressPhotos">
+        <PropertyRef Name="uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ExerciseMonitoringModelStoreContainer">
+    <EntitySet Name="exerciseLogs" EntityType="Self.exerciseLogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProgressPhotos" EntityType="Self.ProgressPhotos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="wrongPoseLogs" EntityType="Self.wrongPoseLogs" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ProgressPhotos_User" Association="Self.FK_ProgressPhotos_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="ProgressPhotos" EntitySet="ProgressPhotos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

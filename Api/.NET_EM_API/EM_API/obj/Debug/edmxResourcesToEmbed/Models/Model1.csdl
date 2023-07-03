@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExerciseMonitoringModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ProgressPhoto">
+    <Key>
+      <PropertyRef Name="pid" />
+    </Key>
+    <Property Name="pid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="caption" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="uid" Type="Int32" />
+    <NavigationProperty Name="User" Relationship="Self.FK_ProgressPhotos_User" FromRole="ProgressPhotos" ToRole="User" />
+    <Property Name="photo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="uid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="profilePic" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="height" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="weight" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bmi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProgressPhotos" Relationship="Self.FK_ProgressPhotos_User" FromRole="User" ToRole="ProgressPhotos" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_ProgressPhotos_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="ProgressPhotos" Type="Self.ProgressPhoto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="uid" />
+      </Principal>
+      <Dependent Role="ProgressPhotos">
+        <PropertyRef Name="uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EM_Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ProgressPhotos" EntityType="Self.ProgressPhoto" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_ProgressPhotos_User" Association="Self.FK_ProgressPhotos_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="ProgressPhotos" EntitySet="ProgressPhotos" />
+    </AssociationSet>
+    <EntitySet Name="exerciseLogs" EntityType="ExerciseMonitoringModel.exerciseLog" />
+    <EntitySet Name="wrongPoseLogs" EntityType="ExerciseMonitoringModel.wrongPoseLog" />
+  </EntityContainer>
+  <EntityType Name="exerciseLog">
+    <Key>
+      <PropertyRef Name="logId" />
+    </Key>
+    <Property Name="logId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uid" Type="Int32" Nullable="false" />
+    <Property Name="exerciseName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="reps" Type="Int32" Nullable="false" />
+    <Property Name="time" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="wrongPoseLog">
+    <Key>
+      <PropertyRef Name="wrngPoseId" />
+    </Key>
+    <Property Name="wrngPoseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uid" Type="Int32" Nullable="false" />
+    <Property Name="atRep" Type="Int32" />
+    <Property Name="wrongPosePic" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="time" Type="DateTime" Precision="3" />
+    <Property Name="direction" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="exerciseName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="angleOne" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="angleTwo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="wrongAngleOne" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="wrongAngleTwo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="correctAngleOne" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="correctAngleTwo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bodyAngle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vertix1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vertix2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vertix3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vertix4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vertix5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

@@ -10,7 +10,6 @@ import ExerciseNavigation from './ExerciseNavigation';
 const Tab = createBottomTabNavigator();
 
 const BottomNavigator = ({route})  => {
-  
   return (
     <Tab.Navigator
       screenOptions={{
@@ -21,14 +20,12 @@ const BottomNavigator = ({route})  => {
           borderTopRightRadius: 20,
           height: 60,
         },
-
       }}
-
     >
       <Tab.Screen
         name="Exercises"
         component={ExerciseNavigation}
-        
+        initialParams={route.params.userData}
         options={{
           tabBarLabelStyle: {
             color: COLORS.white,
@@ -52,7 +49,6 @@ const BottomNavigator = ({route})  => {
             fontSize: 15,
             marginBottom: 2,
           },
-          
           tabBarIcon: () => (
             <FaIcon name="user-alt" color={COLORS.white} size={25} />
           ),

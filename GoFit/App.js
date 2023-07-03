@@ -17,6 +17,10 @@ import ExerciseDetail from './src/views/screens/ExerciseDetail';
 import SplashScreen from './src/views/screens/SplashScreen';
 import EditProfile from './src/views/screens/EditProfile';
 import Gallery from './src/views/screens/Gallery';
+import AI_SCREEN from './src/views/screens/AI_SCREEN';
+import AddProgressImage from './src/views/screens/AddProgressImage';
+import LogsScreen from './src/views/screens/LogsScreen';
+import ExerciseLogDetail from './src/views/screens/ExerciseLogDetail';
 
 const Stack = createNativeStackNavigator();
 
@@ -24,7 +28,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <StatusBar backgroundColor={COLORS.white} barStyle="dark-content" />
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Navigator screenOptions={{ headerShown: false,navigationBarHidden:true}}>
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="BoardScreen" component={OnBoardScreen} />
         <Stack.Screen name="LoginScreen" component={Login} />
@@ -33,8 +37,11 @@ const App = () => {
         <Stack.Screen name="ProfileScreen" component={Profile} />
         <Stack.Screen name="EditProfileScreen" component={EditProfile} />
         <Stack.Screen name="GalleryScreen" component={Gallery} />
+        <Stack.Screen name="LogScreen" component={LogsScreen} />
+        <Stack.Screen name="LogDetailScreen" component={ExerciseLogDetail} />
         <Stack.Screen name="GenderSelection" component={GenderSelection} />
         <Stack.Screen name="AgeSelection" component={AgeSelection} />
+        <Stack.Screen name="AddProgressImage" component={AddProgressImage} />
       </Stack.Navigator>
     </NavigationContainer>
   );

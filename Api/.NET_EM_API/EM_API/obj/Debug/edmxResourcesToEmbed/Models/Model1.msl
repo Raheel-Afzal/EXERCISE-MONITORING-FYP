@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ExerciseMonitoringModelStoreContainer" CdmEntityContainer="EM_Entities">
+    <EntitySetMapping Name="ProgressPhotos">
+      <EntityTypeMapping TypeName="ExerciseMonitoringModel.ProgressPhoto">
+        <MappingFragment StoreEntitySet="ProgressPhotos">
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="pid" ColumnName="pid" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="caption" ColumnName="caption" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ExerciseMonitoringModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="profilePic" ColumnName="profilePic" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="bmi" ColumnName="bmi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="exerciseLogs">
+      <EntityTypeMapping TypeName="ExerciseMonitoringModel.exerciseLog">
+        <MappingFragment StoreEntitySet="exerciseLogs">
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="reps" ColumnName="reps" />
+          <ScalarProperty Name="exerciseName" ColumnName="exerciseName" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="logId" ColumnName="logId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wrongPoseLogs">
+      <EntityTypeMapping TypeName="ExerciseMonitoringModel.wrongPoseLog">
+        <MappingFragment StoreEntitySet="wrongPoseLogs">
+          <ScalarProperty Name="vertix5" ColumnName="vertix5" />
+          <ScalarProperty Name="vertix4" ColumnName="vertix4" />
+          <ScalarProperty Name="vertix3" ColumnName="vertix3" />
+          <ScalarProperty Name="vertix2" ColumnName="vertix2" />
+          <ScalarProperty Name="vertix1" ColumnName="vertix1" />
+          <ScalarProperty Name="bodyAngle" ColumnName="bodyAngle" />
+          <ScalarProperty Name="correctAngleTwo" ColumnName="correctAngleTwo" />
+          <ScalarProperty Name="correctAngleOne" ColumnName="correctAngleOne" />
+          <ScalarProperty Name="wrongAngleTwo" ColumnName="wrongAngleTwo" />
+          <ScalarProperty Name="wrongAngleOne" ColumnName="wrongAngleOne" />
+          <ScalarProperty Name="angleTwo" ColumnName="angleTwo" />
+          <ScalarProperty Name="angleOne" ColumnName="angleOne" />
+          <ScalarProperty Name="exerciseName" ColumnName="exerciseName" />
+          <ScalarProperty Name="direction" ColumnName="direction" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="wrongPosePic" ColumnName="wrongPosePic" />
+          <ScalarProperty Name="atRep" ColumnName="atRep" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="wrngPoseId" ColumnName="wrngPoseId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ExerciseMonitoringModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="exerciseLogs">
+          <Key>
+            <PropertyRef Name="logId" />
+          </Key>
+          <Property Name="logId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="uid" Type="int" Nullable="false" />
+          <Property Name="exerciseName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="reps" Type="int" Nullable="false" />
+          <Property Name="time" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProgressPhotos">
+          <Key>
+            <PropertyRef Name="pid" />
+          </Key>
+          <Property Name="pid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="photo" Type="varchar" MaxLength="200" />
+          <Property Name="date" Type="date" />
+          <Property Name="caption" Type="text" />
+          <Property Name="uid" Type="int" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="100" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="password" Type="varchar" MaxLength="50" />
+          <Property Name="profilePic" Type="varchar" MaxLength="200" />
+          <Property Name="gender" Type="varchar" MaxLength="10" />
+          <Property Name="age" Type="varchar" MaxLength="2" />
+          <Property Name="height" Type="varchar" MaxLength="50" />
+          <Property Name="weight" Type="varchar" MaxLength="50" />
+          <Property Name="bmi" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="wrongPoseLogs">
+          <Key>
+            <PropertyRef Name="wrngPoseId" />
+          </Key>
+          <Property Name="wrngPoseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="uid" Type="int" Nullable="false" />
+          <Property Name="atRep" Type="int" />
+          <Property Name="wrongPosePic" Type="varchar(max)" />
+          <Property Name="time" Type="datetime" />
+          <Property Name="direction" Type="varchar" MaxLength="50" />
+          <Property Name="exerciseName" Type="varchar" MaxLength="50" />
+          <Property Name="angleOne" Type="varchar" MaxLength="50" />
+          <Property Name="angleTwo" Type="varchar" MaxLength="50" />
+          <Property Name="wrongAngleOne" Type="varchar" MaxLength="50" />
+          <Property Name="wrongAngleTwo" Type="varchar" MaxLength="50" />
+          <Property Name="correctAngleOne" Type="varchar" MaxLength="50" />
+          <Property Name="correctAngleTwo" Type="varchar" MaxLength="50" />
+          <Property Name="bodyAngle" Type="varchar" MaxLength="50" />
+          <Property Name="vertix1" Type="varchar" MaxLength="50" />
+          <Property Name="vertix2" Type="varchar" MaxLength="50" />
+          <Property Name="vertix3" Type="varchar" MaxLength="50" />
+          <Property Name="vertix4" Type="varchar" MaxLength="50" />
+          <Property Name="vertix5" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_ProgressPhotos_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="ProgressPhotos" Type="Self.ProgressPhotos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="ProgressPhotos">
+              <PropertyRef Name="uid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ExerciseMonitoringModelStoreContainer">
+          <EntitySet Name="exerciseLogs" EntityType="Self.exerciseLogs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProgressPhotos" EntityType="Self.ProgressPhotos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="wrongPoseLogs" EntityType="Self.wrongPoseLogs" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ProgressPhotos_User" Association="Self.FK_ProgressPhotos_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="ProgressPhotos" EntitySet="ProgressPhotos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ExerciseMonitoringModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ProgressPhoto">
+          <Key>
+            <PropertyRef Name="pid" />
+          </Key>
+          <Property Name="pid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="date" Type="DateTime" Precision="0" />
+          <Property Name="caption" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="uid" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="Self.FK_ProgressPhotos_User" FromRole="ProgressPhotos" ToRole="User" />
+          <Property Name="photo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="profilePic" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="age" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="height" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="weight" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="bmi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ProgressPhotos" Relationship="Self.FK_ProgressPhotos_User" FromRole="User" ToRole="ProgressPhotos" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_ProgressPhotos_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="ProgressPhotos" Type="Self.ProgressPhoto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="ProgressPhotos">
+              <PropertyRef Name="uid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EM_Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ProgressPhotos" EntityType="Self.ProgressPhoto" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK_ProgressPhotos_User" Association="Self.FK_ProgressPhotos_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="ProgressPhotos" EntitySet="ProgressPhotos" />
+          </AssociationSet>
+          <EntitySet Name="exerciseLogs" EntityType="ExerciseMonitoringModel.exerciseLog" />
+          <EntitySet Name="wrongPoseLogs" EntityType="ExerciseMonitoringModel.wrongPoseLog" />
+          </EntityContainer>
+        <EntityType Name="exerciseLog">
+          <Key>
+            <PropertyRef Name="logId" />
+          </Key>
+          <Property Name="logId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="uid" Type="Int32" Nullable="false" />
+          <Property Name="exerciseName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="reps" Type="Int32" Nullable="false" />
+          <Property Name="time" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="wrongPoseLog">
+          <Key>
+            <PropertyRef Name="wrngPoseId" />
+          </Key>
+          <Property Name="wrngPoseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="uid" Type="Int32" Nullable="false" />
+          <Property Name="atRep" Type="Int32" />
+          <Property Name="wrongPosePic" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="time" Type="DateTime" Precision="3" />
+          <Property Name="direction" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="exerciseName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="angleOne" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="angleTwo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="wrongAngleOne" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="wrongAngleTwo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="correctAngleOne" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="correctAngleTwo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="bodyAngle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="vertix1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="vertix2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="vertix3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="vertix4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="vertix5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ExerciseMonitoringModelStoreContainer" CdmEntityContainer="EM_Entities">
+          <EntitySetMapping Name="ProgressPhotos">
+            <EntityTypeMapping TypeName="ExerciseMonitoringModel.ProgressPhoto">
+              <MappingFragment StoreEntitySet="ProgressPhotos">
+                <ScalarProperty Name="photo" ColumnName="photo" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="caption" ColumnName="caption" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="ExerciseMonitoringModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="profilePic" ColumnName="profilePic" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="age" ColumnName="age" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="bmi" ColumnName="bmi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="exerciseLogs">
+            <EntityTypeMapping TypeName="ExerciseMonitoringModel.exerciseLog">
+              <MappingFragment StoreEntitySet="exerciseLogs">
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="reps" ColumnName="reps" />
+                <ScalarProperty Name="exerciseName" ColumnName="exerciseName" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="logId" ColumnName="logId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wrongPoseLogs">
+            <EntityTypeMapping TypeName="ExerciseMonitoringModel.wrongPoseLog">
+              <MappingFragment StoreEntitySet="wrongPoseLogs">
+                <ScalarProperty Name="vertix5" ColumnName="vertix5" />
+                <ScalarProperty Name="vertix4" ColumnName="vertix4" />
+                <ScalarProperty Name="vertix3" ColumnName="vertix3" />
+                <ScalarProperty Name="vertix2" ColumnName="vertix2" />
+                <ScalarProperty Name="vertix1" ColumnName="vertix1" />
+                <ScalarProperty Name="bodyAngle" ColumnName="bodyAngle" />
+                <ScalarProperty Name="correctAngleTwo" ColumnName="correctAngleTwo" />
+                <ScalarProperty Name="correctAngleOne" ColumnName="correctAngleOne" />
+                <ScalarProperty Name="wrongAngleTwo" ColumnName="wrongAngleTwo" />
+                <ScalarProperty Name="wrongAngleOne" ColumnName="wrongAngleOne" />
+                <ScalarProperty Name="angleTwo" ColumnName="angleTwo" />
+                <ScalarProperty Name="angleOne" ColumnName="angleOne" />
+                <ScalarProperty Name="exerciseName" ColumnName="exerciseName" />
+                <ScalarProperty Name="direction" ColumnName="direction" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="wrongPosePic" ColumnName="wrongPosePic" />
+                <ScalarProperty Name="atRep" ColumnName="atRep" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="wrngPoseId" ColumnName="wrngPoseId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
